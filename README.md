@@ -64,11 +64,11 @@ seed=42. Full confusion matrices and per-class metrics are in that file.
 | Random Forest | 62.6% | 63.0% ± 1.5% |
 
 **Selected model: Logistic Regression** (72.8% test accuracy). Random Forest
-scored lower here — this is genuine, not a mistake: the synthetic labels are
+scored lower here this is genuine, not a mistake: the synthetic labels are
 generated as a *linear* combination of features plus noise (see Data section
 above), so a linear model has a natural advantage on this particular dataset.
 This should not be read as "logistic regression beats random forests" in
-general — it's a property of how this specific synthetic data was built.
+general it's a property of how this specific synthetic data was built.
 
 Logistic Regression confusion matrix (test set, rows=true, cols=predicted):
 
@@ -87,7 +87,7 @@ Per-class precision / recall / F1 (Logistic Regression, test set):
 | High | 0.789 | 0.690 | 0.736 | 200 |
 
 The model separates Low and High risk reasonably well; Moderate is the
-hardest class to call, which is expected — it's the middle bucket with the
+hardest class to call, which is expected it's the middle bucket with the
 least distinct signal.
 
 ## How to reproduce these results
@@ -108,7 +108,7 @@ jupyter notebook notebooks/model_evaluation.ipynb
 ```
 
 `reports/metrics.json` is checked into the repo, so you can diff your locally
-reproduced run against it directly — the numbers should match exactly given
+reproduced run against it directly the numbers should match exactly given
 the fixed seed.
 
 ## Running the app
@@ -166,7 +166,7 @@ python -m pytest tests/ -v
   model doesn't see trends over time, which is arguably more relevant to
   real burnout than a single day's numbers.
 - **Moderate class is the weak point.** Precision/recall for "Moderate" is
-  noticeably lower than for "Low" or "High" — see the confusion matrix above.
+  noticeably lower than for "Low" or "High" see the confusion matrix above.
 
 This is a portfolio project demonstrating an ML workflow (data generation,
 baseline comparison, cross-validation, evaluation, reproducibility), not a
