@@ -87,7 +87,7 @@ Per-class precision / recall / F1 (Logistic Regression, test set):
 | High | 0.789 | 0.690 | 0.736 | 200 |
 
 The model separates Low and High risk reasonably well; Moderate is the
-hardest class to call, which is expected it's the middle bucket with the
+hardest class to call, which is expected: it is the middle bucket with the
 least distinct signal.
 
 ## How to reproduce these results
